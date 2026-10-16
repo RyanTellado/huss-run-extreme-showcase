@@ -4,15 +4,37 @@
 
 [**▶ Play on Roblox**](https://www.roblox.com/games/71842565259467) · 33,500+ visits · 940+ favorites · 24-player servers · launched October 2026
 
-![A chaos crossing in a live match: a coin shower rains through a thunderstorm while the hero crosses alone](media/hero.png)
+![Two of the maps and seven of the weapons, rendered by the game's own offline pipeline](media/hero.png)
 
-> This is a showcase. The game's source is private; what follows describes how it is built, with screenshots taken from the live build and from its own offline render pipeline.
+> This is a showcase. The game's source is private; what follows describes how it is built. Every map, weapon and effect pictured here was authored as data and rendered by the game's own pipeline, with no 3D artist.
 
 ---
 
 ## The game in one paragraph
 
 Huss Run Extreme is sharks-and-minnows for 24 players. Runners cross a field; catchers try to tag them; anyone tagged switches sides. Each crossing can bring **CHAOS**: meteor showers, bombing runs, tidal waves, UFO abductions, or coin storms that reward the brave. Players can call events in on the other team, or become the **Game Master** and direct the chaos for a whole match. Around that core: a hero mechanic (one player crosses alone while everyone watches), 19 weapons with animated finishers, 8 maps, capture the flag, a season pass, quests, and a full in-game store. **92% of players are on phones**, so every screen is designed for a thumb first.
+
+---
+
+## The world
+
+Eight maps, each with its own theme and set dressing: a stadium pitch, a neon deck, a cherry-blossom sky island, a haunted pumpkin patch and more.
+
+![Six of the maps, rendered by the offline pipeline](media/maps.png)
+
+Nineteen weapons, from a starter shiv and a pool noodle up to premium blades with their own effects:
+
+![The weapon catalogue, rendered from the same data the game builds from](media/weapons.png)
+
+Each premium weapon ends a match with its own animated finisher:
+
+![Finisher frame strips rendered from the weapon preview engine](media/finishers.png)
+
+Sixteen CHAOS events, each built around one hero prop:
+
+![All CHAOS events, rendered from their in-game props](media/chaos_events.png)
+
+And in a match:
 
 ![Gameplay: one verdict per player, a stunned catcher, the free revive, the stun read at a glance, the CHAOS menu and the live title screen](media/gameplay.png)
 
@@ -87,17 +109,9 @@ The game has no 3D artist. Every map, weapon, prop, effect and screen is authore
 
 - **Maps:** a map format of floor slabs, painted lines, props by reference, pads, spawn lines and flag rings. Each map renders from fixed camera rigs (lobby corner, far corner, player point of view, top-down) so layout changes can be reviewed side by side before they reach Studio.
 
-![Six of the maps, rendered by the offline pipeline](media/maps.png)
-
-- **Weapons and finishers:** each weapon is parts plus an effect spec. A small solver poses the rig for each swing keyframe, and the **same** keyframes drive the in-game animator, so the web preview and the game cannot drift apart. Frame strips like these are generated automatically for every weapon:
-
-![Finisher frame strips rendered from the weapon preview engine](media/finishers.png)
-
-![The weapon catalogue, rendered from the same data the game builds from](media/weapons.png)
+- **Weapons and finishers:** each weapon is parts plus an effect spec. A small solver poses the rig for each swing keyframe, and the **same** keyframes drive the in-game animator, so the web preview and the game cannot drift apart. The finisher strips above are generated automatically for every weapon.
 
 - **CHAOS events:** each event's "hero" prop (the meteor, the bomber, the UFO) is modelled once and reused three ways: as the in-world effect, as the card art in the store, and as the icon. Icons are keyed out with an outline by a script, then uploaded through Roblox Open Cloud.
-
-![All CHAOS events, rendered from their in-game props](media/chaos_events.png)
 
 - **Asset delivery:** `upload.py` pushes images and audio to the game's group through the Open Cloud Assets API, polls the operation until the asset exists, and writes the returned ids straight into the config modules, so an asset is never referenced by a hand-typed id.
 

@@ -1,8 +1,8 @@
-# Huss Run Extreme
+# Chaos Valley (formerly Huss Run Extreme)
 
 **A live, phone-first multiplayer Roblox game, built solo and launched two days after the first commit, with lag-compensated combat, a data-driven content pipeline, and analytics built in from launch day.**
 
-[**▶ Play on Roblox**](https://www.roblox.com/games/71842565259467) · 33,500+ visits · 940+ favorites · 24-player servers · launched October 2026
+[**▶ Play on Roblox**](https://www.roblox.com/games/71842565259467) · 43,000+ visits · 1,100+ favorites · 24-player servers · launched October 2026
 
 ![Two of the maps and seven of the weapons, rendered by the game's own offline pipeline](media/hero.png)
 
@@ -12,7 +12,7 @@
 
 ## The game in one paragraph
 
-Huss Run Extreme is sharks-and-minnows for 24 players. Runners cross a field; catchers try to tag them; anyone tagged switches sides. Each crossing can bring **CHAOS**: meteor showers, bombing runs, tidal waves, UFO abductions, or coin storms that reward the brave. Players can call events in on the other team, or become the **Game Master** and direct the chaos for a whole match. Around that core: a hero mechanic (one player crosses alone while everyone watches), 19 weapons with animated finishers, 8 maps, capture the flag, a season pass, quests, and a full in-game store. **92% of players are on phones**, so every screen is designed for a thumb first.
+Chaos Valley is sharks-and-minnows for 24 players. Runners cross a field; catchers try to tag them; anyone tagged switches sides. Each crossing can bring **CHAOS**: meteor showers, bombing runs, tidal waves, UFO abductions, or coin storms that reward the brave. Players can call events in on the other team, or become the **Game Master** and direct the chaos for a whole match. Around that core: a hero mechanic (one player crosses alone while everyone watches), 19 weapons with animated finishers, 8 maps, capture the flag, a season pass, quests, and a full in-game store. **92% of players are on phones**, so every screen is designed for a thumb first.
 
 ---
 
